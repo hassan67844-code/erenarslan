@@ -4,656 +4,646 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>محمد أرسلان  - Senior SEO Specialist</title>
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  }
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-  body {
-    line-height: 1.7;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-  /* ثيمات */
-  body[data-theme="dark"] {
-    background: radial-gradient(circle at top, #020617 0, #020617 40%, #000000 100%);
-    color: #e5e7eb;
-  }
+    body {
+      line-height: 1.7;
+    }
 
-  body[data-theme="light"] {
-    background: linear-gradient(
-      to bottom,
-      #f3f4f6 0%,
-      #e5edf7 35%,
-      #f9fafb 100%
-    );
-    color: #111827;
-  }
+    /* ثيمات */
+    body[data-theme="dark"] {
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #000000 100%);
+      color: #e5e7eb;
+    }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+    body[data-theme="light"] {
+      background: linear-gradient(
+        to bottom,
+        #f3f4f6 0%,
+        #e5edf7 35%,
+        #f9fafb 100%
+      );
+      color: #111827;
+    }
 
-  .page {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 24px 16px 64px;
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  header {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 32px;
-  }
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
 
-  @media (min-width: 768px) {
     header {
-      flex-direction: row;
-      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    /* ====== Top Bar Styling ====== */
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-start;
+      gap: 14px;
+      margin-bottom: 25px;
+      margin-top: 15px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      cursor: pointer;
+      transition: .2s;
+      font-size: 13px;
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, #22c55e, #3b82f6);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .theme-toggle {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      cursor: pointer;
+      font-size: 15px;
+      transition: .2s;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    body[data-theme="light"] .theme-toggle {
+      background: rgba(255,255,255,0.8);
+      color: #111827;
+      border-color: rgba(148,163,184,0.6);
+    }
+
+    /* الصورة الشخصية */
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: radial-gradient(circle at 30% 0, #22c55e33, transparent 60%);
+      box-shadow:
+        0 0 0 2px rgba(148, 163, 184, 0.35),
+        0 22px 45px rgba(15, 23, 42, 0.9);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-main {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 800;
+      color: #f9fafb;
+    }
+
+    body[data-theme="light"] .name {
+      color: #0f172a;
+    }
+
+    .title {
+      font-size: 15px;
+      color: #a5b4fc;
+      font-weight: 500;
+    }
+
+    body[data-theme="light"] .title {
+      color: #4f46e5;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: #cbd5f5;
+      max-width: 520px;
+    }
+
+    body[data-theme="light"] .hero-sub {
+      color: #374151;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+
+    body[data-theme="light"] .hero-meta {
+      color: #6b7280;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
       align-items: center;
+      gap: 4px;
     }
-  }
 
-  /* سويتش اللغة */
-  .top-bar {
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-    margin-bottom: 8px;
-  }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
 
-  .lang-switch,
-  .theme-switch {
-    display: inline-flex;
-    gap: 6px;
-  }
+    .btn {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
 
-  .lang-btn {
-    padding: 4px 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(148,163,184,0.4);
-    background: transparent;
-    font-size: 12px;
-    cursor: pointer;
-    color: inherit;
-    transition: all .15s ease;
-  }
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e, #06b6d4, #8b5cf6);
+      border-color: rgba(148, 163, 184, 0.2);
+      color: #f9fafb;
+      box-shadow: 0 12px 30px rgba(59, 130, 246, 0.55);
+    }
 
-  .lang-btn.active {
-    background: linear-gradient(135deg, #22c55e, #06b6d4, #8b5cf6);
-    color: #f9fafb;
-    border-color: transparent;
-  }
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 16px 40px rgba(59, 130, 246, 0.75);
+    }
 
-  .theme-toggle {
-    padding: 4px 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(148,163,184,0.4);
-    background: rgba(15,23,42,0.4);
-    font-size: 12px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    color: #e5e7eb;
-    transition: all .15s ease;
-  }
+    .btn-outline {
+      border-color: rgba(148, 163, 184, 0.5);
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.8);
+    }
 
-  body[data-theme="light"] .theme-toggle {
-    background: rgba(255,255,255,0.8);
-    color: #111827;
-  }
+    body[data-theme="light"] .btn-outline {
+      background: rgba(255,255,255,0.9);
+      color: #111827;
+      border-color: rgba(148,163,184,0.6);
+    }
 
-  .theme-toggle:hover,
-  .lang-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 18px rgba(15,23,42,0.3);
-  }
+    .btn-outline:hover {
+      background: rgba(30, 64, 175, 0.8);
+      border-color: rgba(129, 140, 248, 0.8);
+      color: #f9fafb;
+    }
 
-  /* الصورة الشخصية */
-  .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: radial-gradient(circle at 30% 0, #22c55e33, transparent 60%);
-    box-shadow:
-      0 0 0 2px rgba(148, 163, 184, 0.35),
-      0 22px 45px rgba(15, 23, 42, 0.9);
-    flex-shrink: 0;
-    position: relative;
-    z-index: 2;
-  }
+    body[data-theme="light"] .btn-outline:hover {
+      background: #111827;
+      color: #f9fafb;
+    }
 
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.6);
+      border-style: dashed;
+    }
 
-  .hero-main {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+    body[data-theme="light"] .btn-ghost {
+      background: rgba(255,255,255,0.7);
+    }
 
-  .name {
-    font-size: 26px;
-    font-weight: 800;
-    color: #f9fafb;
-  }
-
-  body[data-theme="light"] .name {
-    color: #0f172a;
-  }
-
-  .title {
-    font-size: 15px;
-    color: #a5b4fc;
-    font-weight: 500;
-  }
-
-  body[data-theme="light"] .title {
-    color: #4f46e5;
-  }
-
-  .hero-sub {
-    font-size: 14px;
-    color: #cbd5f5;
-    max-width: 520px;
-  }
-
-  body[data-theme="light"] .hero-sub {
-    color: #374151;
-  }
-
-  .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    font-size: 13px;
-    color: #9ca3af;
-    margin-top: 4px;
-  }
-
-  body[data-theme="light"] .hero-meta {
-    color: #6b7280;
-  }
-
-  .hero-meta span {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .btn {
-    border-radius: 999px;
-    padding: 9px 18px;
-    font-size: 13px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #22c55e, #06b6d4, #8b5cf6);
-    border-color: rgba(148, 163, 184, 0.2);
-    color: #f9fafb;
-    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.55);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-1px) scale(1.01);
-    box-shadow: 0 16px 40px rgba(59, 130, 246, 0.75);
-  }
-
-  .btn-outline {
-    border-color: rgba(148, 163, 184, 0.5);
-    color: #e5e7eb;
-    background: rgba(15, 23, 42, 0.8);
-  }
-
-  body[data-theme="light"] .btn-outline {
-    background: rgba(255,255,255,0.9);
-    color: #111827;
-    border-color: rgba(148,163,184,0.6);
-  }
-
-  .btn-outline:hover {
-    background: rgba(30, 64, 175, 0.8);
-    border-color: rgba(129, 140, 248, 0.8);
-    color: #f9fafb;
-  }
-
-  body[data-theme="light"] .btn-outline:hover {
-    background: #111827;
-    color: #f9fafb;
-  }
-
-  .btn-ghost {
-    background: rgba(15, 23, 42, 0.6);
-    border-style: dashed;
-  }
-
-  body[data-theme="light"] .btn-ghost {
-    background: rgba(255,255,255,0.7);
-  }
-
-  .layout {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 24px;
-  }
-
-  @media (max-width: 900px) {
     .layout {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
     }
-  }
 
-  section {
-    margin-bottom: 24px;
-  }
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
 
-  h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #e5e7eb;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+    section {
+      margin-bottom: 24px;
+    }
 
-  body[data-theme="light"] h2 {
-    color: #0f172a;
-  }
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-  h2::before {
-    content: "";
-    display: inline-block;
-    width: 6px;
-    height: 18px;
-    border-radius: 999px;
-    background: linear-gradient(180deg, #22c55e, #06b6d4, #8b5cf6);
-  }
+    body[data-theme="light"] h2 {
+      color: #0f172a;
+    }
 
-  .card {
-    border-radius: 18px;
-    padding: 16px 18px;
-    backdrop-filter: blur(12px);
-  }
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 18px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #22c55e, #06b6d4, #8b5cf6);
+    }
 
-  body[data-theme="dark"] .card {
-    background: rgba(15, 23, 42, 0.95);
-    border: 1px solid rgba(148, 163, 184, 0.25);
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
-    color: #e5e7eb;
-  }
+    .card {
+      border-radius: 18px;
+      padding: 16px 18px;
+      backdrop-filter: blur(12px);
+    }
 
-  body[data-theme="light"] .card {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-    color: #111827;
-  }
+    body[data-theme="dark"] .card {
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+    }
 
-  .timeline-item {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(55, 65, 81, 0.6);
-  }
+    body[data-theme="light"] .card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      color: #111827;
+    }
 
-  body[data-theme="light"] .timeline-item {
-    border-bottom: 1px solid rgba(209,213,219,0.9);
-  }
+    .timeline-item {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(55, 65, 81, 0.6);
+    }
 
-  .timeline-item:last-child {
-    border-bottom: none;
-  }
+    body[data-theme="light"] .timeline-item {
+      border-bottom: 1px solid rgba(209,213,219,0.9);
+    }
 
-  .job-header {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 4px;
-  }
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
 
-  .job-title {
-    font-weight: 600;
-    font-size: 14px;
-    color: inherit;
-  }
+    .job-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
 
-  .job-meta {
-    font-size: 12px;
-    color: #9ca3af;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
+    .job-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: inherit;
+    }
 
-  body[data-theme="light"] .job-meta {
-    color: #6b7280;
-  }
+    .job-meta {
+      font-size: 12px;
+      color: #9ca3af;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
 
-  .job-meta span::before {
-    content: "•";
-    margin: 0 3px;
-    color: #4b5563;
-  }
+    body[data-theme="light"] .job-meta {
+      color: #6b7280;
+    }
 
-  .job-meta span:first-child::before {
-    content: "";
-    margin: 0;
-  }
+    .job-meta span::before {
+      content: "•";
+      margin: 0 3px;
+      color: #4b5563;
+    }
 
-  .job-points {
-    margin-top: 6px;
-    font-size: 13px;
-    padding-right: 16px;
-  }
+    .job-meta span:first-child::before {
+      content: "";
+      margin: 0;
+    }
 
-  .job-points li {
-    margin-bottom: 4px;
-  }
+    .job-points {
+      margin-top: 6px;
+      font-size: 13px;
+      padding-right: 16px;
+    }
 
-  .pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+    .job-points li {
+      margin-bottom: 4px;
+    }
 
-  .pill {
-    font-size: 12px;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.4);
-    color: #e5e7eb;
-    white-space: nowrap;
-  }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-  body[data-theme="light"] .pill {
-    background: rgba(255,255,255,0.9);
-    color: #111827;
-    border-color: rgba(148,163,184,0.7);
-  }
+    .pill {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
 
-  .stat-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-    margin-top: 10px;
-  }
+    body[data-theme="light"] .pill {
+      background: rgba(255,255,255,0.9);
+      color: #111827;
+      border-color: rgba(148,163,184,0.7);
+    }
 
-  .stat {
-    border-radius: 14px;
-    padding: 8px 10px;
-    font-size: 12px;
-  }
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
 
-  body[data-theme="dark"] .stat {
-    background: radial-gradient(circle at top left, #22c55e22, #020617);
-    border: 1px solid rgba(55, 65, 81, 0.9);
-  }
+    .stat {
+      border-radius: 14px;
+      padding: 8px 10px;
+      font-size: 12px;
+    }
 
-  body[data-theme="light"] .stat {
-    background: rgba(255,255,255,0.9);
-    border: 1px solid rgba(0,0,0,0.06);
-  }
+    body[data-theme="dark"] .stat {
+      background: radial-gradient(circle at top left, #22c55e22, #020617);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+    }
 
-  .stat strong {
-    display: block;
-    font-size: 16px;
-    color: #facc15;
-    margin-bottom: 2px;
-  }
+    body[data-theme="light"] .stat {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
 
-  .contact-card p {
-    font-size: 13px;
-    margin-bottom: 6px;
-  }
+    .stat strong {
+      display: block;
+      font-size: 16px;
+      color: #facc15;
+      margin-bottom: 2px;
+    }
 
-  .contact-card span.label {
-    color: #9ca3af;
-    font-size: 12px;
-    margin-left: 4px;
-  }
+    .contact-card p {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
 
-  footer {
-    margin-top: 24px;
-    text-align: center;
-    font-size: 12px;
-    color: #6b7280;
-  }
+    .contact-card span.label {
+      color: #9ca3af;
+      font-size: 12px;
+      margin-left: 4px;
+    }
 
-  /* results section */
-  #results {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+    }
 
-  #results h2 {
-    font-size: 22px;
-  }
+    /* results section */
+    #results {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
 
-  .results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-  }
+    #results h2 {
+      font-size: 22px;
+    }
 
-  .result-card {
-    border-radius: 14px;
-    padding: 10px;
-    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-    cursor: zoom-in;
-  }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
 
-  body[data-theme="dark"] .result-card {
-    background: rgba(15, 23, 42, 0.95);
-    border: 1px solid rgba(148, 163, 184, 0.35);
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
-  }
+    .result-card {
+      border-radius: 14px;
+      padding: 10px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      cursor: zoom-in;
+    }
 
-  body[data-theme="light"] .result-card {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-    color: #111827;
-  }
+    body[data-theme="dark"] .result-card {
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+    }
 
-  .result-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 1);
-    border-color: rgba(129, 140, 248, 0.9);
-  }
+    body[data-theme="light"] .result-card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      color: #111827;
+    }
 
-  .result-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-  }
+    .result-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 1);
+      border-color: rgba(129, 140, 248, 0.9);
+    }
 
-  .result-caption {
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: center;
-    color: #cbd5e1;
-    font-weight: 500;
-  }
+    .result-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
 
-  body[data-theme="light"] .result-caption {
-    color: #374151;
-  }
+    .result-caption {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: #cbd5e1;
+      font-weight: 500;
+    }
 
-  /* lightbox */
-  .lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 50;
-    padding: 16px;
-  }
+    body[data-theme="light"] .result-caption {
+      color: #374151;
+    }
 
-  .lightbox.open {
-    display: flex;
-  }
+    /* lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      padding: 16px;
+    }
 
-  .lightbox-content {
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-  }
+    .lightbox.open {
+      display: flex;
+    }
 
-  .lightbox-content img {
-    max-width: 100%;
-    max-height: 90vh;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-  }
+    .lightbox-content {
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+    }
 
-  .lightbox-close {
-    position: absolute;
-    top: -32px;
-    right: 0;
-    color: #e5e7eb;
-    font-size: 28px;
-    cursor: pointer;
-    user-select: none;
-  }
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    }
 
-  /* إخفاء/إظهار اللغة */
-  .lang-en {
-    display: none;
-  }
-  body[data-lang="ar"] .lang-ar {
-  display: block;
-}
+    .lightbox-close {
+      position: absolute;
+      top: -32px;
+      right: 0;
+      color: #e5e7eb;
+      font-size: 28px;
+      cursor: pointer;
+      user-select: none;
+    }
 
-body[data-lang="ar"] .lang-en {
-  display: none;
-}
+    /* إخفاء/إظهار اللغة */
+    .lang-en {
+      display: none;
+    }
 
-body[data-lang="en"] .lang-ar {
-  display: none;
-}
+    body[data-lang="ar"] .lang-ar {
+      display: block;
+    }
 
-body[data-lang="en"] .lang-en {
-  display: block;
-}
+    body[data-lang="ar"] .lang-en {
+      display: none;
+    }
 
-</style>
+    body[data-lang="en"] .lang-ar {
+      display: none;
+    }
 
-
+    body[data-lang="en"] .lang-en {
+      display: block;
+    }
+  </style>
 </head>
+
 <body data-theme="dark" data-lang="ar">
   <div class="page">
-        <div class="top-bar">
+
+    <!-- شريط اللغة + الثيم -->
+    <div class="top-bar">
+      <button id="themeToggle" class="theme-toggle">🌙 Dark</button>
       <div class="lang-switch">
         <button class="lang-btn active" data-lang="ar">العربية</button>
         <button class="lang-btn" data-lang="en">English</button>
       </div>
-      <button class="theme-toggle" id="themeToggle">
-        🌙 Dark
-      </button>
     </div>
 
-    <div class="top-bar">
-  <div class="lang-switch">
-    <button class="lang-btn active" data-lang="ar">العربية</button>
-    <button class="lang-btn" data-lang="en">English</button>
-  </div>
-  <button class="theme-toggle" id="themeToggle">
-    🌙 / ☀️
-  </button>
-</div>
+    <header>
+      <div style="display:flex; gap:16px; align-items:center;">
+        <div class="avatar">
+          <img src="profile.jpg" alt="Mohamed Arslan">
+        </div>
+        <div class="hero-main">
 
-<header>
-  <div style="display:flex; gap:16px; align-items:center;">
-    <div class="avatar">
-      <img src="profile.jpg" alt="Mohamed Arslan">
-    </div>
-    <div class="hero-main">
+          <!-- الاسم -->
+          <div class="name lang-ar">محمد أرسان</div>
+          <div class="name lang-en">Mohamed Arslan</div>
 
-      <!-- الاسم -->
-      <div class="name lang-ar">محمد أرسان</div>
-      <div class="name lang-en">Mohamed Arslan</div>
+          <!-- العنوان -->
+          <div class="title lang-ar">Senior SEO Specialist · Data-Driven Strategies Expert</div>
+          <div class="title lang-en">Senior SEO Specialist · Data-Driven, Growth-Focused SEO</div>
 
-      <!-- العنوان -->
-      <div class="title lang-ar">Senior SEO Specialist · Data-Driven Strategies Expert</div>
-      <div class="title lang-en">Senior SEO Specialist · Data-Driven, Growth-Focused SEO</div>
+          <!-- نبذة -->
+          <p class="hero-sub lang-ar">
+            أكثر من 5 سنوات خبرة في قيادة استراتيجيات تحسين محركات البحث لعلامات تجارية في
+            مجالات السياحة العلاجية، التعليم، العقار، والتجارة الإلكترونية، مع تركيز على النتائج
+            القابلة للقياس وتحسين تجربة المستخدم.
+          </p>
+          <p class="hero-sub lang-en">
+            SEO specialist with 5+ years of experience leading search strategies for brands in
+            medical tourism, education, real estate and e-commerce – with a strong focus on
+            measurable growth, conversion optimisation and user experience.
+          </p>
 
-      <!-- نبذة -->
-      <p class="hero-sub lang-ar">
-        أكثر من 5 سنوات خبرة في قيادة استراتيجيات تحسين محركات البحث لعلامات تجارية في
-        مجالات السياحة العلاجية، التعليم، العقار، والتجارة الإلكترونية، مع تركيز على النتائج
-        القابلة للقياس وتحسين تجربة المستخدم.
-      </p>
-      <p class="hero-sub lang-en">
-        SEO specialist with 5+ years of experience leading search strategies for brands in
-        medical tourism, education, real estate and e-commerce – with a strong focus on
-        measurable growth, conversion optimisation and user experience.
-      </p>
+          <!-- بيانات الميتا -->
+          <div class="hero-meta">
+            <span>
+              📍 <span class="lang-ar">الدوحة – المنتزه، قطر</span>
+              <span class="lang-en">Doha – Al Muntazah, Qatar</span>
+            </span>
+            <span>
+              📞 <a href="tel:+97471675716">+974 716 75 716</a>
+            </span>
+            <span>
+              ✉️ <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a>
+            </span>
+          </div>
 
-      <!-- بيانات الميتا -->
-      <div class="hero-meta">
-        <span>
-          📍 <span class="lang-ar">الدوحة – المنتزه، قطر</span>
-          <span class="lang-en">Doha – Al Muntazah, Qatar</span>
-        </span>
-        <span>
-          📞 <a href="tel:+97471675716">+974 716 75 716</a>
-        </span>
-        <span>
-          ✉️ <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a>
-        </span>
+          <!-- الأزرار -->
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+              📄 <span class="lang-ar">تحميل السيرة الذاتية</span>
+              <span class="lang-en">Download CV</span>
+            </a>
+
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
+              in <span class="lang-ar">زيارة ملف لينكدإن</span>
+              <span class="lang-en">View LinkedIn Profile</span>
+            </a>
+
+            <a class="btn btn-outline btn-ghost" href="#results">
+              📊 <span class="lang-ar">مشاهدة النتائج</span>
+              <span class="lang-en">View SEO Results</span>
+            </a>
+          </div>
+
+        </div>
       </div>
-
-      <!-- الأزرار -->
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
-          📄 <span class="lang-ar">تحميل السيرة الذاتية</span>
-          <span class="lang-en">Download CV</span>
-        </a>
-
-        <a class="btn btn-outline" href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
-          in <span class="lang-ar">زيارة ملف لينكدإن</span>
-          <span class="lang-en">View LinkedIn Profile</span>
-        </a>
-
-        <a class="btn btn-outline btn-ghost" href="#results">
-          📊 <span class="lang-ar">مشاهدة النتائج</span>
-          <span class="lang-en">View SEO Results</span>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</header>
-
+    </header>
 
     <div class="layout">
       <!-- العمود الأيسر: من أنا + الخبرات -->
@@ -693,22 +683,22 @@ body[data-lang="en"] .lang-en {
           <h2>الخبرات العملية</h2>
           <div class="card">
             <!-- TurkeyLuxuryClinics -->
-<div class="timeline-item">
-  <div class="job-header">
-    <div class="job-title">Senior SEO Specialist – TurkeyLuxuryClinics</div>
-    <div class="job-meta">
-      <span>يناير 2025 – أكتوبر 2025</span>
-      <span>تركيا – السياحة العلاجية</span>
-    </div>
-  </div>
-  <ul class="job-points">
-    <li>تحسين شامل للبنية التقنية للموقع (Technical SEO) بما يشمل تحسين السرعة، إصلاح الصفحات المكسورة، تحسين ملف Sitemap، وإدارة ميزانية الزحف (Crawl Budget).</li>
-    <li>رفع معدل التحويل عبر تطوير صفحات الهبوط (Landing Pages)، إضافة عروض مخصصة، وتحسين تجربة المستخدم والـ CTA.</li>
-    <li>زيادة عدد الزيارات اليومية من 30 زيارة فقط إلى 1200 زيارة/يوم خلال 4 أشهر — معدل نمو +1000% للغة الإنجليزية.</li>
-    <li>زيادة الترافيك في اللغات الأخرى بمعدل +3000% من خلال استراتيجية محتوى متعددة اللغات (العربية – الإنجليزية – الفرنسية – الروسية – الإسبانية).</li>
-    <li>تحسين البنية الداخلية للروابط (Internal Linking) وزيادة ظهور الصفحات التجارية على الصفحة الأولى في Google.</li>
-  </ul>
-</div>
+            <div class="timeline-item">
+              <div class="job-header">
+                <div class="job-title">Senior SEO Specialist – TurkeyLuxuryClinics</div>
+                <div class="job-meta">
+                  <span>يناير 2025 – أكتوبر 2025</span>
+                  <span>تركيا – السياحة العلاجية</span>
+                </div>
+              </div>
+              <ul class="job-points">
+                <li>تحسين شامل للبنية التقنية للموقع (Technical SEO) بما يشمل تحسين السرعة، إصلاح الصفحات المكسورة، تحسين ملف Sitemap، وإدارة ميزانية الزحف (Crawl Budget).</li>
+                <li>رفع معدل التحويل عبر تطوير صفحات الهبوط (Landing Pages)، إضافة عروض مخصصة، وتحسين تجربة المستخدم والـ CTA.</li>
+                <li>زيادة عدد الزيارات اليومية من 30 زيارة فقط إلى 1200 زيارة/يوم خلال 4 أشهر — معدل نمو +1000% للغة الإنجليزية.</li>
+                <li>زيادة الترافيك في اللغات الأخرى بمعدل +3000% من خلال استراتيجية محتوى متعددة اللغات (العربية – الإنجليزية – الفرنسية – الروسية – الإسبانية).</li>
+                <li>تحسين البنية الداخلية للروابط (Internal Linking) وزيادة ظهور الصفحات التجارية على الصفحة الأولى في Google.</li>
+              </ul>
+            </div>
 
             <!-- Fiper Trading -->
             <div class="timeline-item">
@@ -776,24 +766,6 @@ body[data-lang="en"] .lang-en {
                 <li>حل مشاكل تقنية حسّنت الظهور في محركات البحث وزادت الزيارات العضوية بنسبة 170%.</li>
                 <li>تحسين المحتوى والعناوين والوصف التعريفي مما قاد لزيادة 200% في الزيارات العضوية.</li>
                 <li>إدارة محتوى متعدد اللغات (6 لغات) مع زيادة 250% في الزيارات العضوية العالمية.</li>
-              </ul>
-            </div>
-
-            <!-- Batal Eye & Dental -->
-            <div class="timeline-item">
-              <div class="job-header">
-                <div class="job-title">SEO Specialist – Batal Eye & Batal Dental Centers</div>
-                <div class="job-meta">
-                  <span>يناير 2024 – يونيو 2024</span>
-                  <span>جدة – السعودية</span>
-                  <span>مجال: طب العيون وطب الأسنان</span>
-                </div>
-              </div>
-              <ul class="job-points">
-                <li>إدارة فريق تطوير الموقع وتحسين البنية الداخلية والـ UX.</li>
-                <li>إعادة هيكلة المحتوى وفق تحديثات جوجل الأخيرة واستعادة النمو بعد انخفاض الترافيك.</li>
-                <li>التركيز على كلمات “طبيب/دكتور + التخصص” لاستهداف نية بحث عالية التحويل.</li>
-                <li>رفع أداء الموقع من 83–85% إلى 97–98% وزيادة الترافيك بأكثر من 200% لمركز الأسنان.</li>
               </ul>
             </div>
 
@@ -903,7 +875,7 @@ body[data-lang="en"] .lang-en {
             <p>
               📞 <strong>الهاتف:</strong>
               <span class="label">واتساب وتيليجرام متاحان على نفس الرقم</span><br />
-              +974 716 75 716
+              <a href="tel:+97471675716">+974 716 75 716</a>
             </p>
             <p>
               ✉️ <strong>البريد الإلكتروني:</strong><br />
@@ -924,157 +896,152 @@ body[data-lang="en"] .lang-en {
       </div>
     </div>
 
+    <!-- Results / Case Studies Section -->
+    <section id="results">
+      <h2>نتائج عملي</h2>
+      <div class="results-grid">
+
+        <!-- Imtilak -->
+        <div class="result-card">
+          <img src="imtilak.png" alt="نتائج SEO لمجموعة امتلاك">
+          <div class="result-caption">Imtilak Group – +200% Organic Growth</div>
+        </div>
+
+        <!-- International Clinics -->
+        <div class="result-card">
+          <img src="international.png" alt="نمو الترافيك في International Clinics">
+          <div class="result-caption">International Clinics – +400% Traffic Increase</div>
+        </div>
+
+        <!-- Fiper Trading -->
+        <div class="result-card">
+          <img src="fiper.png" alt="تحسن النقرات والانطباعات في Fiper Trading">
+          <div class="result-caption">Fiper Trading – 1.99M Impressions / +975% Clicks</div>
+        </div>
+
+        <!-- Ilajak Medical -->
+        <div class="result-card">
+          <img src="ilajak.png" alt="نتائج SEO لمشروع Ilajak Medical">
+          <div class="result-caption">Ilajak Medical – Medical SEO / Top Ranking Keywords</div>
+        </div>
+
+        <!-- Itqan Education -->
+        <div class="result-card">
+          <img src="itqan.png" alt="رفع الترافيك في Itqan Education">
+          <div class="result-caption">Itqan Education – +975% Clicks in 3 Months</div>
+        </div>
+
+        <!-- TurkeyLuxuryClinics -->
+        <div class="result-card">
+          <img src="luxury.png" alt="نتائج SEO لمشروع TurkeyLuxuryClinics">
+          <div class="result-caption">TurkeyLuxuryClinics – +3000% Multi-Language Traffic</div>
+        </div>
+
+        <!-- Mdares AI Platform -->
+        <div class="result-card">
+          <img src="mdares.png" alt="نتائج منصة Mdares AI">
+          <div class="result-caption">Mdares AI – Full Technical SEO Fix & Core Web Vitals</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+      </div>
+    </div>
+
     <footer>
       © <span id="year"></span> محمد أرسلان – جميع الحقوق محفوظة
     </footer>
   </div>
 
-<script>
-  // init: theme + language
-  const body = document.body;
-  const themeToggle = document.getElementById('themeToggle');
-  const langButtons = document.querySelectorAll('.lang-btn');
+  <script>
+    // init: theme + language
+    const body = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    const langButtons = document.querySelectorAll('.lang-btn');
 
-  // استرجاع الإعدادات من localStorage
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  const savedLang  = localStorage.getItem('lang')  || 'ar';
+    // استرجاع الإعدادات من localStorage
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedLang  = localStorage.getItem('lang')  || 'ar';
 
-  body.setAttribute('data-theme', savedTheme);
-  body.setAttribute('data-lang', savedLang);
+    body.setAttribute('data-theme', savedTheme);
+    body.setAttribute('data-lang', savedLang);
 
-  // تحديث حالة أزرار اللغة
-  function updateLangButtons(activeLang) {
+    // تحديث حالة أزرار اللغة
+    function updateLangButtons(activeLang) {
+      langButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === activeLang);
+      });
+    }
+    updateLangButtons(savedLang);
+
+    // تحديث زر الثيم نصياً
+    function updateThemeToggleText(theme) {
+      if (theme === 'dark') {
+        themeToggle.textContent = '🌙 Dark';
+      } else {
+        themeToggle.textContent = '☀️ Light';
+      }
+    }
+    updateThemeToggleText(savedTheme);
+
+    // تغيير الثيم
+    themeToggle.addEventListener('click', () => {
+      const current = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', current);
+      localStorage.setItem('theme', current);
+      updateThemeToggleText(current);
+    });
+
+    // تغيير اللغة
     langButtons.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === activeLang);
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        body.setAttribute('data-lang', lang);
+        localStorage.setItem('lang', lang);
+        updateLangButtons(lang);
+      });
     });
-  }
-  updateLangButtons(savedLang);
 
-  // تحديث زر الثيم نصياً
-  function updateThemeToggleText(theme) {
-    if (theme === 'dark') {
-      themeToggle.textContent = '🌙 Dark';
-    } else {
-      themeToggle.textContent = '☀️ Light';
-    }
-  }
-  updateThemeToggleText(savedTheme);
+    // سنة الفوتر
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  // تغيير الثيم
-  themeToggle.addEventListener('click', () => {
-    const current = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    body.setAttribute('data-theme', current);
-    localStorage.setItem('theme', current);
-    updateThemeToggleText(current);
-  });
+    // Lightbox logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
 
-  // تغيير اللغة
-  langButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.lang;
-      body.setAttribute('data-lang', lang);
-      localStorage.setItem('lang', lang);
-      updateLangButtons(lang);
+    document.querySelectorAll('.result-card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('open');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
     });
-  });
 
-  // سنة الفوتر
-  document.getElementById("year").textContent = new Date().getFullYear();
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightboxImg.src = "";
+    }
 
-  // Lightbox logic (كما كان)
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.querySelector('.lightbox-close');
+    lightboxClose.addEventListener('click', closeLightbox);
 
-  document.querySelectorAll('.result-card img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightbox.classList.add('open');
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
     });
-  });
 
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    lightboxImg.src = "";
-  }
-
-  lightboxClose.addEventListener('click', closeLightbox);
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-      closeLightbox();
-    }
-  });
-</script>
-
-
-<!-- Results / Case Studies Section -->
-<section id="results">
-  <h2>نتائج عملي</h2>
-  <div class="results-grid">
-
-    <!-- Imtilak -->
-    <div class="result-card">
-      <img src="imtilak.png" alt="نتائج SEO لمجموعة امتلاك">
-      <div class="result-caption">Imtilak Group – +200% Organic Growth</div>
-    </div>
-
-    <!-- International Clinics -->
-    <div class="result-card">
-      <img src="international.png" alt="نمو الترافيك في International Clinics">
-      <div class="result-caption">International Clinics – +400% Traffic Increase</div>
-    </div>
-
-    <!-- Fiper Trading -->
-    <div class="result-card">
-      <img src="fiper.png" alt="تحسن النقرات والانطباعات في Fiper Trading">
-      <div class="result-caption">Fiper Trading – 1.99M Impressions / +975% Clicks</div>
-    </div>
-
-    <!-- Ilajak Medical -->
-    <div class="result-card">
-      <img src="ilajak.png" alt="نتائج SEO لمشروع Ilajak Medical">
-      <div class="result-caption">Ilajak Medical – Medical SEO / Top Ranking Keywords</div>
-    </div>
-
-    <!-- Itqan Education -->
-    <div class="result-card">
-      <img src="itqan.png" alt="رفع الترافيك في Itqan Education">
-      <div class="result-caption">Itqan Education – +975% Clicks in 3 Months</div>
-    </div>
-
-    <!-- TurkeyLuxuryClinics -->
-    <div class="result-card">
-      <img src="luxury.png" alt="نتائج SEO لمشروع TurkeyLuxuryClinics">
-      <div class="result-caption">TurkeyLuxuryClinics – +3000% Multi-Language Traffic</div>
-    </div>
-
-    <!-- Mdares AI Platform -->
-    <div class="result-card">
-      <img src="mdares.png" alt="نتائج منصة Mdares AI">
-      <div class="result-caption">Mdares AI – Full Technical SEO Fix & Core Web Vitals</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Lightbox Overlay -->
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-content">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="">
-  </div>
-</div>
-
-
-
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
-
