@@ -43,6 +43,97 @@
         align-items: center;
       }
     }
+    /* Results section grid */
+#results {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#results h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#results h2::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #22c55e, #38bdf8);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.result-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: zoom-in;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.5);
+}
+
+.result-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Lightbox styles */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 16px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -32px;
+  right: 0;
+  color: #e5e7eb;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
 
 .avatar {
   width: 150px;
@@ -602,9 +693,83 @@
     </footer>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+  // سنة الفوتر
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Lightbox logic
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+
+  // فتح اللايت بوكس عند الضغط على أي صورة
+  document.querySelectorAll('.result-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.classList.add('open');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = "";
+  }
+
+  // إغلاق بالزر X
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  // إغلاق عند الضغط خارج الصورة
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // إغلاق بزر Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+</script>
+
+  <!-- Results / Case Studies Section -->
+<section id="results">
+  <h2>نتائج عملي</h2>
+  <div class="results-grid">
+    
+    <!-- مثال 1 -->
+    <div class="result-card">
+      <img src="result1.jpg" alt="نمو الترافيك في International Clinics">
+    </div>
+
+    <!-- مثال 2 -->
+    <div class="result-card">
+      <img src="result2.jpg" alt="تحسن النقرات والانطباعات في Fiper Trading">
+    </div>
+
+    <!-- مثال 3 -->
+    <div class="result-card">
+      <img src="result3.jpg" alt="نتائج SEO لمشروع TurkeyLuxuryClinics">
+    </div>
+
+    <!-- مثال 4 -->
+    <div class="result-card">
+      <img src="result4.jpg" alt="تحسن الترتيب في محركات البحث">
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox Overlay -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+</div>
+
 </body>
 </html>
 
