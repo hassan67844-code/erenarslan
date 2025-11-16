@@ -52,6 +52,8 @@
   background: none;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
   flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .avatar img {
@@ -59,6 +61,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 
 
     .hero-main {
@@ -297,9 +300,10 @@
   <div class="page">
     <header>
       <div style="display:flex; gap:16px; align-items:center;">
-        <div class="avatar">
-<img src="profile.jpg" alt="Profile Photo">
+<div class="avatar">
+    <img src="profile.jpg" alt="Profile Photo">
 </div>
+
         <div class="hero-main">
           <div class="name">محمد أرسان</div>
           <div class="title">Senior SEO Specialist · Data-Driven Strategies Expert</div>
