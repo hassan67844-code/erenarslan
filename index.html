@@ -26,7 +26,7 @@
       line-height: 1.7;
     }
 
-    /* ================== الثيمات (قريبة من التصميم اللي أرسلته) ================== */
+    /* ================== الثيمات ================== */
 
     body[data-theme="dark"] {
       background:
@@ -68,7 +68,7 @@
       }
     }
 
-    /* ================== Top Bar (ثيم + لغة) ================== */
+    /* ================== Top Bar ================== */
 
     .top-bar {
       display: flex;
@@ -143,7 +143,7 @@
       box-shadow: 0 8px 18px rgba(148,163,184,0.7);
     }
 
-    /* ================== الصورة الشخصية والـ Hero ================== */
+    /* ================== Hero ================== */
 
     .avatar {
       width: 150px;
@@ -275,6 +275,8 @@
       border-style: dashed;
     }
 
+    /* ================== Layout & Cards ================== */
+
     .layout {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -312,8 +314,6 @@
       border-radius: 999px;
       background: linear-gradient(180deg, #22c55e, #06b6d4, #8b5cf6);
     }
-
-    /* ================== الكروت / النيومورفيزم ================== */
 
     .card {
       border-radius: 24px;
@@ -468,7 +468,7 @@
       color: #6b7280;
     }
 
-    /* ================== Results Section ================== */
+    /* ================== Results ================== */
 
     #results {
       margin-top: 60px;
@@ -628,14 +628,15 @@
           </p>
           <p class="hero-sub lang-en">
             SEO specialist with 5+ years of experience leading search strategies for brands in
-            medical tourism, education, real estate and e-commerce – with a strong focus on
+            medical tourism, education, real estate and e-commerce, with a strong focus on
             measurable growth, conversion optimisation and user experience.
           </p>
 
           <!-- بيانات الميتا -->
           <div class="hero-meta">
             <span>
-              📍 <span class="lang-ar">الدوحة – المنتزه، قطر</span>
+              📍
+              <span class="lang-ar">الدوحة – المنتزه، قطر</span>
               <span class="lang-en">Doha – Al Muntazah, Qatar</span>
             </span>
             <span>
@@ -672,157 +673,322 @@
       <!-- العمود الأيسر: من أنا + الخبرات -->
       <div>
         <section id="about">
-          <h2>من أنا</h2>
+          <h2>
+            <span class="lang-ar">من أنا</span>
+            <span class="lang-en">About Me</span>
+          </h2>
           <div class="card">
-            <p style="font-size:14px;">
-              متخصص في تحسين محركات البحث (SEO) وتطوير استراتيجيات المحتوى مع خبرة عملية في بناء المواقع
-              من الصفر، إدارة فرق التطوير والمحتوى، وتحويل البيانات من Google Analytics وSearch Console
-              إلى قرارات تسويقية واضحة. أركز على:
-            </p>
-            <ul class="job-points" style="margin-top:6px;">
-              <li>تحسين الأداء العضوي للمواقع وتحقيق نمو كبير في الزيارات والنقرات والتحويلات.</li>
-              <li>بناء بنية موقع قوية (Technical SEO, Site Architecture, Internal Linking).</li>
-              <li>تخطيط وتنفيذ استراتيجيات محتوى متعددة اللغات تستهدف نوايا بحث تجارية وتعاملاتية.</li>
-              <li>استخدام البيانات لقياس النجاح وتحسين الحملات بشكل مستمر.</li>
-            </ul>
-            <div class="stat-row">
-              <div class="stat">
-                <strong>+2000%</strong>
-                نمو متوسط في ترتيب النتائج العضوية عبر المشاريع المختلفة.
+            <div class="lang-ar">
+              <p style="font-size:14px;">
+                متخصص في تحسين محركات البحث (SEO) وتطوير استراتيجيات المحتوى مع خبرة عملية في بناء المواقع
+                من الصفر، إدارة فرق التطوير والمحتوى، وتحويل البيانات من Google Analytics وSearch Console
+                إلى قرارات تسويقية واضحة. أركز على:
+              </p>
+              <ul class="job-points" style="margin-top:6px;">
+                <li>تحسين الأداء العضوي للمواقع وتحقيق نمو كبير في الزيارات والنقرات والتحويلات.</li>
+                <li>بناء بنية موقع قوية (Technical SEO, Site Architecture, Internal Linking).</li>
+                <li>تخطيط وتنفيذ استراتيجيات محتوى متعددة اللغات تستهدف نوايا بحث تجارية وتعاملاتية.</li>
+                <li>استخدام البيانات لقياس النجاح وتحسين الحملات بشكل مستمر.</li>
+              </ul>
+              <div class="stat-row">
+                <div class="stat">
+                  <strong>+2000%</strong>
+                  نمو متوسط في ترتيب النتائج العضوية عبر المشاريع المختلفة.
+                </div>
+                <div class="stat">
+                  <strong>+1000%</strong>
+                  زيادة في النقرات العضوية لمشاريع تعليمية خلال أقل من عام.
+                </div>
+                <div class="stat">
+                  <strong>+200K</strong>
+                  زيارات شهرية لمشاريع طبية وعقارية بعد تطبيق الاستراتيجية.
+                </div>
               </div>
-              <div class="stat">
-                <strong>+1000%</strong>
-                زيادة في النقرات العضوية لمشاريع تعليمية خلال أقل من عام.
-              </div>
-              <div class="stat">
-                <strong>+200K</strong>
-                زيارات شهرية لمشاريع طبية وعقارية بعد تطبيق الاستراتيجية.
+            </div>
+
+            <div class="lang-en">
+              <p style="font-size:14px;">
+                SEO specialist focused on technical SEO and content strategy, with hands-on experience
+                building websites from scratch, managing development and content teams, and turning
+                Google Analytics and Search Console data into clear marketing decisions. I focus on:
+              </p>
+              <ul class="job-points" style="margin-top:6px;">
+                <li>Improving organic performance and achieving strong growth in visits, clicks, and conversions.</li>
+                <li>Building a solid site architecture (Technical SEO, site structure, internal linking).</li>
+                <li>Planning and executing multilingual content strategies targeting commercial and transactional intent.</li>
+                <li>Using data to measure success and continuously optimise campaigns.</li>
+              </ul>
+              <div class="stat-row">
+                <div class="stat">
+                  <strong>+2000%</strong>
+                  Average improvement in organic rankings across different projects.
+                </div>
+                <div class="stat">
+                  <strong>+1000%</strong>
+                  Growth in organic clicks for educational projects in less than a year.
+                </div>
+                <div class="stat">
+                  <strong>+200K</strong>
+                  Monthly visits for medical and real-estate projects after applying the strategy.
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section id="experience">
-          <h2>الخبرات العملية</h2>
+          <h2>
+            <span class="lang-ar">الخبرات العملية</span>
+            <span class="lang-en">Professional Experience</span>
+          </h2>
           <div class="card">
-            <!-- TurkeyLuxuryClinics -->
-            <div class="timeline-item">
-              <div class="job-header">
-                <div class="job-title">Senior SEO Specialist – TurkeyLuxuryClinics</div>
-                <div class="job-meta">
-                  <span>يناير 2025 – أكتوبر 2025</span>
-                  <span>تركيا – السياحة العلاجية</span>
+
+            <!-- Arabic Experience -->
+            <div class="lang-ar">
+              <!-- TurkeyLuxuryClinics -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">Senior SEO Specialist – TurkeyLuxuryClinics</div>
+                  <div class="job-meta">
+                    <span>يناير 2025 – أكتوبر 2025</span>
+                    <span>تركيا – السياحة العلاجية</span>
+                  </div>
                 </div>
+                <ul class="job-points">
+                  <li>تحسين شامل للبنية التقنية للموقع (Technical SEO) بما يشمل تحسين السرعة، إصلاح الصفحات المكسورة، تحسين ملف Sitemap، وإدارة ميزانية الزحف.</li>
+                  <li>رفع معدل التحويل عبر تطوير صفحات الهبوط، إضافة عروض مخصصة، وتحسين تجربة المستخدم والـ CTA.</li>
+                  <li>زيادة عدد الزيارات اليومية من 30 زيارة فقط إلى 1200 زيارة/يوم خلال 4 أشهر — معدل نمو +1000% للغة الإنجليزية.</li>
+                  <li>زيادة الترافيك في اللغات الأخرى بمعدل +3000% من خلال استراتيجية محتوى متعددة اللغات (العربية – الإنجليزية – الفرنسية – الروسية – الإسبانية).</li>
+                  <li>تحسين البنية الداخلية للروابط وزيادة ظهور الصفحات التجارية على الصفحة الأولى في Google.</li>
+                </ul>
               </div>
-              <ul class="job-points">
-                <li>تحسين شامل للبنية التقنية للموقع (Technical SEO) بما يشمل تحسين السرعة، إصلاح الصفحات المكسورة، تحسين ملف Sitemap، وإدارة ميزانية الزحف (Crawl Budget).</li>
-                <li>رفع معدل التحويل عبر تطوير صفحات الهبوط (Landing Pages)، إضافة عروض مخصصة، وتحسين تجربة المستخدم والـ CTA.</li>
-                <li>زيادة عدد الزيارات اليومية من 30 زيارة فقط إلى 1200 زيارة/يوم خلال 4 أشهر — معدل نمو +1000% للغة الإنجليزية.</li>
-                <li>زيادة الترافيك في اللغات الأخرى بمعدل +3000% من خلال استراتيجية محتوى متعددة اللغات (العربية – الإنجليزية – الفرنسية – الروسية – الإسبانية).</li>
-                <li>تحسين البنية الداخلية للروابط (Internal Linking) وزيادة ظهور الصفحات التجارية على الصفحة الأولى في Google.</li>
-              </ul>
+
+              <!-- Fiper Trading -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">SEO Specialist (Freelance) – Fiper Trading</div>
+                  <div class="job-meta">
+                    <span>أكتوبر 2024 – مايو 2025</span>
+                    <span>قطر – الدوحة</span>
+                    <span>مجال: التداول والفوركس</span>
+                  </div>
+                </div>
+                <ul class="job-points">
+                  <li>قيادة وتنفيذ استراتيجية SEO كاملة للسوق العربي في مجال التداول.</li>
+                  <li>رفع النقرات من 0 إلى 43.4K والانطباعات إلى 1.99M خلال أول 6 أشهر.</li>
+                  <li>إنشاء خطة محتوى تضم أكثر من 200 مقال SEO عالي الجودة.</li>
+                  <li>تنفيذ تحسينات تقنية لرفع سرعة الموقع وتحسين الزحف والأرشفة.</li>
+                </ul>
+              </div>
+
+              <!-- Itqan Education -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">SEO Team Lead – Itqan Education</div>
+                  <div class="job-meta">
+                    <span>يناير 2024 – يونيو 2024</span>
+                    <span>تركيا</span>
+                    <span>مجال: التعليم</span>
+                  </div>
+                </div>
+                <ul class="job-points">
+                  <li>بناء أساس الـ SEO من الصفر (Keyword Research, Content Calendar, On-Page SEO).</li>
+                  <li>زيادة النقرات من 987 إلى 10.6K (+975%) والانطباعات من 109K إلى 603K (+453%).</li>
+                  <li>تحسين CTR من 0.9% إلى 1.8% ورفع متوسط الترتيب من 15.9 إلى 12.4.</li>
+                </ul>
+              </div>
+
+              <!-- Mdares AI -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">Technical SEO Specialist – Mdares AI Platform</div>
+                  <div class="job-meta">
+                    <span>أبريل 2025 – مايو 2025</span>
+                    <span>الرياض – السعودية</span>
+                    <span>مجال: التعليم والتقنية</span>
+                  </div>
+                </div>
+                <ul class="job-points">
+                  <li>تنفيذ تدقيق فني شامل لموقع تعليمي كبير (AI Schools).</li>
+                  <li>تحديد أولويات مشاكل الزحف والأرشفة وتحسين Core Web Vitals.</li>
+                  <li>التنسيق المباشر مع فريق التطوير لتنفيذ التحسينات ومتابعة نتائجها عبر GSC وLighthouse.</li>
+                </ul>
+              </div>
+
+              <!-- International Clinics -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">Senior SEO (Freelance) – International Clinics</div>
+                  <div class="job-meta">
+                    <span>يناير 2024 – مايو 2025</span>
+                    <span>تركيا – السياحة العلاجية</span>
+                  </div>
+                </div>
+                <ul class="job-points">
+                  <li>رفع ترتيب النتائج العضوية بنسبة 400% لموقع السياحة العلاجية.</li>
+                  <li>حل مشاكل تقنية حسّنت الظهور في محركات البحث وزادت الزيارات العضوية بنسبة 170%.</li>
+                  <li>تحسين المحتوى والعناوين والوصف التعريفي مما قاد لزيادة 200% في الزيارات العضوية.</li>
+                  <li>إدارة محتوى متعدد اللغات (6 لغات) مع زيادة 250% في الزيارات العضوية العالمية.</li>
+                </ul>
+              </div>
+
+              <!-- Imtilak / Iilajak / Arkan -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">SEO & SEM Specialist – Imtilak Group, Iilajak Medical, Arkan Proje</div>
+                  <div class="job-meta">
+                    <span>2021 – 2023</span>
+                    <span>تركيا</span>
+                    <span>مجالات: العقار، السياحة العلاجية، المشاريع الاستثمارية</span>
+                  </div>
+                </div>
+                <ul class="job-points">
+                  <li>تحقيق الصفحة الأولى لكلمات تنافسية في العقار والسياحة العلاجية خلال أشهر قليلة.</li>
+                  <li>رفع عدد الزوار من 60K إلى 120K شهريًا للعقار، ومن 80K إلى 200K شهريًا للمواقع الطبية.</li>
+                  <li>حل المشكلات التقنية ومراجعة المحتوى بشكل مستمر وفق أحدث إرشادات جوجل.</li>
+                </ul>
+              </div>
+
+              <!-- Freelance -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">Freelance SEO Specialist – Child Diapers, Buyuk Anadolu, وغيرها</div>
+                  <div class="job-meta">
+                    <span>2020 – 2022</span>
+                    <span>تركيا</span>
+                    <span>مجال: تجارة إلكترونية، استيراد وتصدير، منتجات أطفال</span>
+                  </div>
+                </div>
+                <ul class="job-points">
+                  <li>إنشاء وإدارة مواقع من الصفر وتحسينها وفق خوارزميات جوجل.</li>
+                  <li>تحسين تجربة المستخدم والـ CTA للصفحات الخدماتية والمنتجات.</li>
+                  <li>تطوير وحضور قوي على Google My Business وتحسين Local SEO.</li>
+                </ul>
+              </div>
             </div>
 
-            <!-- Fiper Trading -->
-            <div class="timeline-item">
-              <div class="job-header">
-                <div class="job-title">SEO Specialist (Freelance) – Fiper Trading</div>
-                <div class="job-meta">
-                  <span>أكتوبر 2024 – مايو 2025</span>
-                  <span>قطر – الدوحة</span>
-                  <span>مجال: التداول والفوركس</span>
+            <!-- English Experience -->
+            <div class="lang-en">
+              <!-- TurkeyLuxuryClinics -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">Senior SEO Specialist – TurkeyLuxuryClinics</div>
+                  <div class="job-meta">
+                    <span>Jan 2025 – Oct 2025</span>
+                    <span>Turkey – Medical Tourism</span>
+                  </div>
                 </div>
+                <ul class="job-points">
+                  <li>Led a full technical SEO overhaul: page speed, fixing broken pages, sitemap optimisation and crawl budget management.</li>
+                  <li>Improved conversion rate by redesigning landing pages, adding targeted offers and optimising UX and CTAs.</li>
+                  <li>Grew daily visits from 30 to 1,200 per day within 4 months (+1000% growth for English content).</li>
+                  <li>Increased traffic in other languages by +3000% via a multilingual content strategy (Arabic, English, French, Russian, Spanish).</li>
+                  <li>Enhanced internal linking and pushed commercial pages to the first page of Google.</li>
+                </ul>
               </div>
-              <ul class="job-points">
-                <li>قيادة وتنفيذ استراتيجية SEO كاملة للسوق العربي في مجال التداول.</li>
-                <li>رفع النقرات من 0 إلى 43.4K والانطباعات إلى 1.99M خلال أول 6 أشهر.</li>
-                <li>إنشاء خطة محتوى تضم أكثر من 200 مقال SEO عالي الجودة.</li>
-                <li>تنفيذ تحسينات تقنية لرفع سرعة الموقع وتحسين الزحف والأرشفة.</li>
-              </ul>
-            </div>
 
-            <!-- Itqan Education -->
-            <div class="timeline-item">
-              <div class="job-header">
-                <div class="job-title">SEO Team Lead – Itqan Education</div>
-                <div class="job-meta">
-                  <span>يناير 2024 – يونيو 2024</span>
-                  <span>تركيا</span>
-                  <span>مجال: التعليم</span>
+              <!-- Fiper Trading -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">SEO Specialist (Freelance) – Fiper Trading</div>
+                  <div class="job-meta">
+                    <span>Oct 2024 – May 2025</span>
+                    <span>Doha, Qatar</span>
+                    <span>Industry: Trading & Forex</span>
+                  </div>
                 </div>
+                <ul class="job-points">
+                  <li>Led and implemented a complete SEO strategy for the Arabic trading market.</li>
+                  <li>Grew clicks from 0 to 43.4K and impressions to 1.99M in the first 6 months.</li>
+                  <li>Built a content plan of 200+ high-quality SEO articles.</li>
+                  <li>Implemented technical improvements to boost speed, crawling and indexability.</li>
+                </ul>
               </div>
-              <ul class="job-points">
-                <li>بناء أساس الـ SEO من الصفر (Keyword Research, Content Calendar, On-Page SEO).</li>
-                <li>زيادة النقرات من 987 إلى 10.6K (+975%) والانطباعات من 109K إلى 603K (+453%).</li>
-                <li>تحسين CTR من 0.9% إلى 1.8% ورفع متوسط الترتيب من 15.9 إلى 12.4.</li>
-              </ul>
-            </div>
 
-            <!-- Mdares ai -->
-            <div class="timeline-item">
-              <div class="job-header">
-                <div class="job-title">Technical SEO Specialist – Mdares AI Platform</div>
-                <div class="job-meta">
-                  <span>أبريل 2025 – مايو 2025</span>
-                  <span>الرياض – السعودية</span>
-                  <span>مجال: التعليم والتقنية</span>
+              <!-- Itqan Education -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">SEO Team Lead – Itqan Education</div>
+                  <div class="job-meta">
+                    <span>Jan 2024 – Jun 2024</span>
+                    <span>Turkey</span>
+                    <span>Industry: Education</span>
+                  </div>
                 </div>
+                <ul class="job-points">
+                  <li>Built the SEO foundation from scratch (keyword research, content calendar, on-page optimisation).</li>
+                  <li>Increased clicks from 987 to 10.6K (+975%) and impressions from 109K to 603K (+453%).</li>
+                  <li>Improved CTR from 0.9% to 1.8% and average position from 15.9 to 12.4.</li>
+                </ul>
               </div>
-              <ul class="job-points">
-                <li>تنفيذ تدقيق فني شامل لموقع تعليمي كبير (AI Schools).</li>
-                <li>تحديد أولويات مشاكل الزحف والأرشفة وتحسين Core Web Vitals.</li>
-                <li>التنسيق المباشر مع فريق التطوير لتنفيذ التحسينات ومتابعة نتائجها عبر GSC وLighthouse.</li>
-              </ul>
-            </div>
 
-            <!-- International Clinics -->
-            <div class="timeline-item">
-              <div class="job-header">
-                <div class="job-title">Senior SEO (Freelance) – International Clinics</div>
-                <div class="job-meta">
-                  <span>يناير 2024 – مايو 2025</span>
-                  <span>تركيا – السياحة العلاجية</span>
+              <!-- Mdares AI -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">Technical SEO Specialist – Mdares AI Platform</div>
+                  <div class="job-meta">
+                    <span>Apr 2025 – May 2025</span>
+                    <span>Riyadh, Saudi Arabia</span>
+                    <span>Industry: EdTech</span>
+                  </div>
                 </div>
+                <ul class="job-points">
+                  <li>Performed a full technical audit for a large educational AI platform.</li>
+                  <li>Prioritised crawling and indexation issues and improved Core Web Vitals.</li>
+                  <li>Worked directly with the dev team to implement fixes and monitor impact via GSC and Lighthouse.</li>
+                </ul>
               </div>
-              <ul class="job-points">
-                <li>رفع ترتيب النتائج العضوية بنسبة 400% لموقع السياحة العلاجية.</li>
-                <li>حل مشاكل تقنية حسّنت الظهور في محركات البحث وزادت الزيارات العضوية بنسبة 170%.</li>
-                <li>تحسين المحتوى والعناوين والوصف التعريفي مما قاد لزيادة 200% في الزيارات العضوية.</li>
-                <li>إدارة محتوى متعدد اللغات (6 لغات) مع زيادة 250% في الزيارات العضوية العالمية.</li>
-              </ul>
-            </div>
 
-            <!-- Imtilak / Iilajak / Arkan / Freelance -->
-            <div class="timeline-item">
-              <div class="job-header">
-                <div class="job-title">SEO & SEM Specialist – Imtilak Group, Iilajak Medical, Arkan Proje</div>
-                <div class="job-meta">
-                  <span>2021 – 2023</span>
-                  <span>تركيا</span>
-                  <span>مجالات: العقار، السياحة العلاجية، المشاريع الاستثمارية</span>
+              <!-- International Clinics -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">Senior SEO (Freelance) – International Clinics</div>
+                  <div class="job-meta">
+                    <span>Jan 2024 – May 2025</span>
+                    <span>Turkey – Medical Tourism</span>
+                  </div>
                 </div>
+                <ul class="job-points">
+                  <li>Increased organic rankings by 400% for a major medical tourism website.</li>
+                  <li>Fixed key technical issues, improving visibility and boosting organic traffic by 170%.</li>
+                  <li>Optimised content, titles and meta descriptions resulting in 200% more organic visits.</li>
+                  <li>Managed multilingual content (6 languages) and achieved 250% growth in global organic traffic.</li>
+                </ul>
               </div>
-              <ul class="job-points">
-                <li>تحقيق الصفحة الأولى لكلمات تنافسية في العقار والسياحة العلاجية خلال أشهر قليلة.</li>
-                <li>رفع عدد الزوار من 60K إلى 120K شهريًا للعقار، ومن 80K إلى 200K شهريًا للمواقع الطبية.</li>
-                <li>حل المشكلات التقنية ومراجعة المحتوى بشكل مستمر وفق أحدث إرشادات جوجل.</li>
-              </ul>
-            </div>
 
-            <div class="timeline-item">
-              <div class="job-header">
-                <div class="job-title">Freelance SEO Specialist – Child Diapers, Buyuk Anadolu, وغيرها</div>
-                <div class="job-meta">
-                  <span>2020 – 2022</span>
-                  <span>تركيا</span>
-                  <span>مجال: تجارة إلكترونية، استيراد وتصدير، منتجات أطفال</span>
+              <!-- Imtilak / Iilajak / Arkan -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">SEO & SEM Specialist – Imtilak Group, Iilajak Medical, Arkan Proje</div>
+                  <div class="job-meta">
+                    <span>2021 – 2023</span>
+                    <span>Turkey</span>
+                    <span>Industries: Real Estate, Medical Tourism, Investment Projects</span>
+                  </div>
                 </div>
+                <ul class="job-points">
+                  <li>Ranked on the first page for highly competitive real-estate and medical tourism keywords in a short time.</li>
+                  <li>Increased monthly visitors from 60K to 120K for real estate and from 80K to 200K for medical sites.</li>
+                  <li>Continuously resolved technical issues and reviewed content based on Google’s latest guidelines.</li>
+                </ul>
               </div>
-              <ul class="job-points">
-                <li>إنشاء وإدارة مواقع من الصفر وتحسينها وفق خوارزميات جوجل.</li>
-                <li>تحسين تجربة المستخدم والـ CTA للصفحات الخدماتية والمنتجات.</li>
-                <li>تطوير وحضور قوي على Google My Business وتحسين Local SEO.</li>
-              </ul>
+
+              <!-- Freelance -->
+              <div class="timeline-item">
+                <div class="job-header">
+                  <div class="job-title">Freelance SEO Specialist – Child Diapers, Buyuk Anadolu, others</div>
+                  <div class="job-meta">
+                    <span>2020 – 2022</span>
+                    <span>Turkey</span>
+                    <span>Industry: E-commerce, Import/Export, Baby Products</span>
+                  </div>
+                </div>
+                <ul class="job-points">
+                  <li>Created and managed websites from scratch and optimised them for Google’s algorithms.</li>
+                  <li>Improved UX and CTAs for service and product pages to drive more leads and sales.</li>
+                  <li>Built strong Google My Business presence and improved local SEO visibility.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -831,30 +997,58 @@
       <!-- العمود الأيمن: المهارات، الأدوات، التعليم، اللغات، التواصل -->
       <div>
         <section id="skills">
-          <h2>المهارات الأساسية</h2>
+          <h2>
+            <span class="lang-ar">المهارات الأساسية</span>
+            <span class="lang-en">Core Skills</span>
+          </h2>
           <div class="card">
-            <p style="font-size:13px; margin-bottom:8px;">تركيز رئيسي على:</p>
-            <div class="pill-row" style="margin-bottom:6px;">
-              <span class="pill">Technical SEO</span>
-              <span class="pill">On-Page & Content SEO</span>
-              <span class="pill">Keyword & SERP Analysis</span>
-              <span class="pill">Content Strategy</span>
-              <span class="pill">SEO-Driven UX</span>
-              <span class="pill">Conversion-Focused Copy</span>
+            <div class="lang-ar">
+              <p style="font-size:13px; margin-bottom:8px;">تركيز رئيسي على:</p>
+              <div class="pill-row" style="margin-bottom:6px;">
+                <span class="pill">Technical SEO</span>
+                <span class="pill">On-Page & Content SEO</span>
+                <span class="pill">Keyword & SERP Analysis</span>
+                <span class="pill">Content Strategy</span>
+                <span class="pill">SEO-Driven UX</span>
+                <span class="pill">Conversion-Focused Copy</span>
+              </div>
+              <p style="font-size:13px; margin-top:6px;">Soft Skills:</p>
+              <div class="pill-row">
+                <span class="pill">العمل ضمن فريق</span>
+                <span class="pill">التفكير النقدي</span>
+                <span class="pill">التفاوض</span>
+                <span class="pill">التواصل الفعال</span>
+                <span class="pill">إدارة المشاريع</span>
+              </div>
             </div>
-            <p style="font-size:13px; margin-top:6px;">Soft Skills:</p>
-            <div class="pill-row">
-              <span class="pill">العمل ضمن فريق</span>
-              <span class="pill">التفكير النقدي</span>
-              <span class="pill">التفاوض</span>
-              <span class="pill">التواصل الفعال</span>
-              <span class="pill">إدارة المشاريع</span>
+
+            <div class="lang-en">
+              <p style="font-size:13px; margin-bottom:8px;">Main focus:</p>
+              <div class="pill-row" style="margin-bottom:6px;">
+                <span class="pill">Technical SEO</span>
+                <span class="pill">On-Page & Content SEO</span>
+                <span class="pill">Keyword & SERP Analysis</span>
+                <span class="pill">Content Strategy</span>
+                <span class="pill">SEO-Driven UX</span>
+                <span class="pill">Conversion-Focused Copy</span>
+              </div>
+              <p style="font-size:13px; margin-top:6px;">Soft skills:</p>
+              <div class="pill-row">
+                <span class="pill">Teamwork</span>
+                <span class="pill">Critical Thinking</span>
+                <span class="pill">Negotiation</span>
+                <span class="pill">Effective Communication</span>
+                <span class="pill">Project Management</span>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="tools">
-          <h2>الأدوات والبرامج</h2>
+          <h2>
+            <span class="lang-ar">الأدوات والبرامج</span>
+            <span class="lang-en">Tools & Platforms</span>
+          </h2>
           <div class="card">
             <div class="pill-row">
               <span class="pill">Google Analytics GA4</span>
@@ -868,52 +1062,99 @@
         </section>
 
         <section id="education">
-          <h2>التعليم والدورات</h2>
+          <h2>
+            <span class="lang-ar">التعليم والدورات</span>
+            <span class="lang-en">Education & Courses</span>
+          </h2>
           <div class="card">
-            <div style="margin-bottom:10px;">
+            <div class="lang-ar" style="margin-bottom:10px;">
               <strong style="font-size:14px;">بكالوريوس الهندسة المدنية</strong>
               <div style="font-size:12px; color:#9ca3af;">2020 – كلية الهندسة المدنية</div>
             </div>
-            <div>
+            <div class="lang-en" style="margin-bottom:10px;">
+              <strong style="font-size:14px;">Bachelor’s Degree in Civil Engineering</strong>
+              <div style="font-size:12px; color:#9ca3af;">2020 – Faculty of Civil Engineering</div>
+            </div>
+
+            <div class="lang-ar">
               <strong style="font-size:14px;">Major of Marketing Strategic</strong>
               <div style="font-size:12px; color:#9ca3af;">أكاديمية الأعمال الدولية – سويسرا (IBAS) · فبراير 2024 – مستمر</div>
+            </div>
+            <div class="lang-en">
+              <strong style="font-size:14px;">Major in Marketing Strategy</strong>
+              <div style="font-size:12px; color:#9ca3af;">International Business Academy of Switzerland (IBAS) · Feb 2024 – Present</div>
             </div>
           </div>
         </section>
 
         <section id="languages">
-          <h2>اللغات</h2>
+          <h2>
+            <span class="lang-ar">اللغات</span>
+            <span class="lang-en">Languages</span>
+          </h2>
           <div class="card">
-            <ul class="job-points">
+            <ul class="job-points lang-ar">
               <li>العربية – اللغة الأم.</li>
               <li>الإنجليزية – مستوى جيد جدًا (قراءة وكتابة وتواصل مهني).</li>
               <li>التركية – مستوى جيد.</li>
+            </ul>
+            <ul class="job-points lang-en">
+              <li>Arabic – Native.</li>
+              <li>English – Very good (reading, writing and professional communication).</li>
+              <li>Turkish – Good level.</li>
             </ul>
           </div>
         </section>
 
         <section id="contact">
-          <h2>معلومات التواصل</h2>
+          <h2>
+            <span class="lang-ar">معلومات التواصل</span>
+            <span class="lang-en">Contact Details</span>
+          </h2>
           <div class="card contact-card">
-            <p>
-              📞 <strong>الهاتف:</strong>
-              <span class="label">واتساب وتيليجرام متاحان على نفس الرقم</span><br />
-              <a href="tel:+97471675716">+974 716 75 716</a>
-            </p>
-            <p>
-              ✉️ <strong>البريد الإلكتروني:</strong><br />
-              <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a>
-            </p>
-            <p>
-              🔗 <strong>لينكدإن:</strong><br />
-              <a href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
-                /mohamed-arslan-25b758237
-              </a>
-            </p>
-            <p>
-              📍 <strong>العنوان:</strong><br />
-              الدوحة – السيلية، قطر
-            </p>
+            <div class="lang-ar">
+              <p>
+                📞 <strong>الهاتف:</strong>
+                <span class="label">واتساب وتيليجرام متاحان على نفس الرقم</span><br />
+                <a href="tel:+97471675716">+974 716 75 716</a>
+              </p>
+              <p>
+                ✉️ <strong>البريد الإلكتروني:</strong><br />
+                <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a>
+              </p>
+              <p>
+                🔗 <strong>لينكدإن:</strong><br />
+                <a href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
+                  /mohamed-arslan-25b758237
+                </a>
+              </p>
+              <p>
+                📍 <strong>العنوان:</strong><br />
+                الدوحة – السيلية، قطر
+              </p>
+            </div>
+
+            <div class="lang-en">
+              <p>
+                📞 <strong>Phone:</strong>
+                <span class="label">WhatsApp & Telegram available on the same number</span><br />
+                <a href="tel:+97471675716">+974 716 75 716</a>
+              </p>
+              <p>
+                ✉️ <strong>Email:</strong><br />
+                <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a>
+              </p>
+              <p>
+                🔗 <strong>LinkedIn:</strong><br />
+                <a href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
+                  /mohamed-arslan-25b758237
+                </a>
+              </p>
+              <p>
+                📍 <strong>Location:</strong><br />
+                Doha – Al Sailiya, Qatar
+              </p>
+            </div>
           </div>
         </section>
       </div>
@@ -921,49 +1162,73 @@
 
     <!-- Results / Case Studies Section -->
     <section id="results">
-      <h2>نتائج عملي</h2>
+      <h2>
+        <span class="lang-ar">نتائج عملي</span>
+        <span class="lang-en">Selected SEO Results</span>
+      </h2>
       <div class="results-grid">
 
         <!-- Imtilak -->
         <div class="result-card">
-          <img src="imtilak.png" alt="نتائج SEO لمجموعة امتلاك">
-          <div class="result-caption">Imtilak Group – +200% Organic Growth</div>
+          <img src="imtilak.png" alt="Imtilak Group SEO Results">
+          <div class="result-caption">
+            <span class="lang-ar">Imtilak Group – نمو عضوي +200%</span>
+            <span class="lang-en">Imtilak Group – +200% Organic Growth</span>
+          </div>
         </div>
 
         <!-- International Clinics -->
         <div class="result-card">
-          <img src="international.png" alt="نمو الترافيك في International Clinics">
-          <div class="result-caption">International Clinics – +400% Traffic Increase</div>
+          <img src="international.png" alt="International Clinics Traffic Growth">
+          <div class="result-caption">
+            <span class="lang-ar">International Clinics – زيادة الترافيك +400%</span>
+            <span class="lang-en">International Clinics – +400% Traffic Increase</span>
+          </div>
         </div>
 
         <!-- Fiper Trading -->
         <div class="result-card">
-          <img src="fiper.png" alt="تحسن النقرات والانطباعات في Fiper Trading">
-          <div class="result-caption">Fiper Trading – 1.99M Impressions / +975% Clicks</div>
+          <img src="fiper.png" alt="Fiper Trading SEO Performance">
+          <div class="result-caption">
+            <span class="lang-ar">Fiper Trading – 1.99M انطباع / +975% نقرات</span>
+            <span class="lang-en">Fiper Trading – 1.99M Impressions / +975% Clicks</span>
+          </div>
         </div>
 
         <!-- Ilajak Medical -->
         <div class="result-card">
-          <img src="ilajak.png" alt="نتائج SEO لمشروع Ilajak Medical">
-          <div class="result-caption">Ilajak Medical – Medical SEO / Top Ranking Keywords</div>
+          <img src="ilajak.png" alt="Ilajak Medical SEO Results">
+          <div class="result-caption">
+            <span class="lang-ar">Ilajak Medical – تصدّر كلمات طبية تنافسية</span>
+            <span class="lang-en">Ilajak Medical – Top Rankings for Competitive Medical Keywords</span>
+          </div>
         </div>
 
         <!-- Itqan Education -->
         <div class="result-card">
-          <img src="itqan.png" alt="رفع الترافيك في Itqan Education">
-          <div class="result-caption">Itqan Education – +975% Clicks in 3 Months</div>
+          <img src="itqan.png" alt="Itqan Education Traffic Growth">
+          <div class="result-caption">
+            <span class="lang-ar">Itqan Education – +975% نقرات في 3 أشهر</span>
+            <span class="lang-en">Itqan Education – +975% Clicks in 3 Months</span>
+          </div>
         </div>
 
         <!-- TurkeyLuxuryClinics -->
         <div class="result-card">
-          <img src="luxury.png" alt="نتائج SEO لمشروع TurkeyLuxuryClinics">
-          <div class="result-caption">TurkeyLuxuryClinics – +3000% Multi-Language Traffic</div>
+          <img src="luxury.png" alt="TurkeyLuxuryClinics SEO Results">
+          <div class="result-caption">
+            <span class="lang-ar">TurkeyLuxuryClinics – +3000% ترافيك متعدد اللغات</span>
+            <span class="lang-en">TurkeyLuxuryClinics – +3000% Multi-Language Traffic</span>
+          </div>
         </div>
 
         <!-- Mdares AI Platform -->
         <div class="result-card">
-          <img src="mdares.png" alt="نتائج منصة Mdares AI">
-          <div class="result-caption">Mdares AI – Full Technical SEO Fix & Core Web Vitals</div>
+          <img src="mdares.png" alt="Mdares AI Technical SEO">
+          <div class="result-caption">
+            <span class="lang-ar">Mdares AI – إصلاح تقني شامل وتحسين Core Web Vitals</span>
+            <span class="lang-en">Mdares AI – Full Technical SEO Fix & Core Web Vitals</span>
+          </div>
         </div>
 
       </div>
@@ -978,32 +1243,35 @@
     </div>
 
     <footer>
-      © <span id="year"></span> محمد أرسلان – جميع الحقوق محفوظة
+      <span class="lang-ar">© <span id="year-ar"></span> محمد أرسلان – جميع الحقوق محفوظة</span>
+      <span class="lang-en">© <span id="year-en"></span> Mohamed Arslan – All rights reserved</span>
     </footer>
   </div>
 
   <script>
-    // init: theme + language
     const body = document.body;
     const themeToggle = document.getElementById('themeToggle');
     const langButtons = document.querySelectorAll('.lang-btn');
 
-    // استرجاع الإعدادات من localStorage
     const savedTheme = localStorage.getItem('theme') || 'dark';
     const savedLang  = localStorage.getItem('lang')  || 'ar';
 
     body.setAttribute('data-theme', savedTheme);
-    body.setAttribute('data-lang', savedLang);
 
-    // تحديث حالة أزرار اللغة
     function updateLangButtons(activeLang) {
       langButtons.forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === activeLang);
       });
     }
-    updateLangButtons(savedLang);
 
-    // تحديث زر الثيم نصياً
+    function applyLang(lang) {
+      body.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      localStorage.setItem('lang', lang);
+      updateLangButtons(lang);
+    }
+
     function updateThemeToggleText(theme) {
       if (theme === 'dark') {
         themeToggle.textContent = '🌙 Dark';
@@ -1011,9 +1279,11 @@
         themeToggle.textContent = '☀️ Light';
       }
     }
+
+    // init
+    applyLang(savedLang);
     updateThemeToggleText(savedTheme);
 
-    // تغيير الثيم
     themeToggle.addEventListener('click', () => {
       const current = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       body.setAttribute('data-theme', current);
@@ -1021,18 +1291,17 @@
       updateThemeToggleText(current);
     });
 
-    // تغيير اللغة
     langButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const lang = btn.dataset.lang;
-        body.setAttribute('data-lang', lang);
-        localStorage.setItem('lang', lang);
-        updateLangButtons(lang);
+        applyLang(lang);
       });
     });
 
     // سنة الفوتر
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const year = new Date().getFullYear();
+    document.getElementById("year-ar").textContent = year;
+    document.getElementById("year-en").textContent = year;
 
     // Lightbox logic
     const lightbox = document.getElementById('lightbox');
