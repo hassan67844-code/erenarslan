@@ -549,12 +549,38 @@
   .lang-en {
     display: none;
   }
+  body[data-lang="ar"] .lang-ar {
+  display: block;
+}
+
+body[data-lang="ar"] .lang-en {
+  display: none;
+}
+
+body[data-lang="en"] .lang-ar {
+  display: none;
+}
+
+body[data-lang="en"] .lang-en {
+  display: block;
+}
+
 </style>
 
 
 </head>
-<body>
+<body data-theme="dark" data-lang="ar">
   <div class="page">
+        <div class="top-bar">
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="ar">العربية</button>
+        <button class="lang-btn" data-lang="en">English</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle">
+        🌙 Dark
+      </button>
+    </div>
+
     <div class="top-bar">
   <div class="lang-switch">
     <button class="lang-btn active" data-lang="ar">العربية</button>
@@ -565,45 +591,69 @@
   </button>
 </div>
 
-    <header>
-      <div style="display:flex; gap:16px; align-items:center;">
-<div class="avatar">
-    <img src="profile.jpg" alt="Profile Photo">
-</div>
+<header>
+  <div style="display:flex; gap:16px; align-items:center;">
+    <div class="avatar">
+      <img src="profile.jpg" alt="Mohamed Arslan">
+    </div>
+    <div class="hero-main">
 
-        <div class="hero-main">
-          <div class="name">محمد أرسلان</div>
-          <div class="title">Senior SEO Specialist · Data-Driven Strategies Expert</div>
-          <p class="hero-sub">
-            أكثر من 5 سنوات خبرة في قيادة استراتيجيات تحسين محركات البحث لعلامات تجارية في
-            مجالات السياحة العلاجية، التعليم، العقار، والتجارة الإلكترونية، مع تركيز على النتائج
-            القابلة للقياس وتحسين تجربة المستخدم.
-          </p>
-          <div class="hero-meta">
-            <span>📍 الدوحة – السيلية، قطر</span>
-<p>
-  📞 <strong>الهاتف:</strong>
-  <span class="label">واتساب وتيليجرام متاحان على نفس الرقم</span><br />
-  <a href="tel:+97471675716">+974 716 75 716</a>
-</p>
+      <!-- الاسم -->
+      <div class="name lang-ar">محمد أرسان</div>
+      <div class="name lang-en">Mohamed Arslan</div>
 
-            <span>✉️ <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a></span>
-          </div>
-          <div class="hero-actions">
-            <!-- غيّر رابط الـ CV هنا لو حابب تضيفه من Google Drive مثلاً -->
-            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">📄 تحميل السيرة الذاتية</a>
-            <a class="btn btn-outline" href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
-              in زيارة ملف لينكدإن
-            </a>
-              </a>
-  <!-- زر الذهاب للنتائج -->
-  <a class="btn btn-outline" href="#results">
-    📊 مشاهدة نتائج عملي
-  </a>
-          </div>
-        </div>
+      <!-- العنوان -->
+      <div class="title lang-ar">Senior SEO Specialist · Data-Driven Strategies Expert</div>
+      <div class="title lang-en">Senior SEO Specialist · Data-Driven, Growth-Focused SEO</div>
+
+      <!-- نبذة -->
+      <p class="hero-sub lang-ar">
+        أكثر من 5 سنوات خبرة في قيادة استراتيجيات تحسين محركات البحث لعلامات تجارية في
+        مجالات السياحة العلاجية، التعليم، العقار، والتجارة الإلكترونية، مع تركيز على النتائج
+        القابلة للقياس وتحسين تجربة المستخدم.
+      </p>
+      <p class="hero-sub lang-en">
+        SEO specialist with 5+ years of experience leading search strategies for brands in
+        medical tourism, education, real estate and e-commerce – with a strong focus on
+        measurable growth, conversion optimisation and user experience.
+      </p>
+
+      <!-- بيانات الميتا -->
+      <div class="hero-meta">
+        <span>
+          📍 <span class="lang-ar">الدوحة – المنتزه، قطر</span>
+          <span class="lang-en">Doha – Al Muntazah, Qatar</span>
+        </span>
+        <span>
+          📞 <a href="tel:+97471675716">+974 716 75 716</a>
+        </span>
+        <span>
+          ✉️ <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a>
+        </span>
       </div>
-    </header>
+
+      <!-- الأزرار -->
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+          📄 <span class="lang-ar">تحميل السيرة الذاتية</span>
+          <span class="lang-en">Download CV</span>
+        </a>
+
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
+          in <span class="lang-ar">زيارة ملف لينكدإن</span>
+          <span class="lang-en">View LinkedIn Profile</span>
+        </a>
+
+        <a class="btn btn-outline btn-ghost" href="#results">
+          📊 <span class="lang-ar">مشاهدة النتائج</span>
+          <span class="lang-en">View SEO Results</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
 
     <div class="layout">
       <!-- العمود الأيسر: من أنا + الخبرات -->
@@ -880,15 +930,62 @@
   </div>
 
 <script>
+  // init: theme + language
+  const body = document.body;
+  const themeToggle = document.getElementById('themeToggle');
+  const langButtons = document.querySelectorAll('.lang-btn');
+
+  // استرجاع الإعدادات من localStorage
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  const savedLang  = localStorage.getItem('lang')  || 'ar';
+
+  body.setAttribute('data-theme', savedTheme);
+  body.setAttribute('data-lang', savedLang);
+
+  // تحديث حالة أزرار اللغة
+  function updateLangButtons(activeLang) {
+    langButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === activeLang);
+    });
+  }
+  updateLangButtons(savedLang);
+
+  // تحديث زر الثيم نصياً
+  function updateThemeToggleText(theme) {
+    if (theme === 'dark') {
+      themeToggle.textContent = '🌙 Dark';
+    } else {
+      themeToggle.textContent = '☀️ Light';
+    }
+  }
+  updateThemeToggleText(savedTheme);
+
+  // تغيير الثيم
+  themeToggle.addEventListener('click', () => {
+    const current = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    body.setAttribute('data-theme', current);
+    localStorage.setItem('theme', current);
+    updateThemeToggleText(current);
+  });
+
+  // تغيير اللغة
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      body.setAttribute('data-lang', lang);
+      localStorage.setItem('lang', lang);
+      updateLangButtons(lang);
+    });
+  });
+
   // سنة الفوتر
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Lightbox logic
+  // Lightbox logic (كما كان)
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxClose = document.querySelector('.lightbox-close');
 
-  // فتح اللايت بوكس عند الضغط على أي صورة
   document.querySelectorAll('.result-card img').forEach(img => {
     img.addEventListener('click', () => {
       lightbox.classList.add('open');
@@ -902,23 +999,21 @@
     lightboxImg.src = "";
   }
 
-  // إغلاق بالزر X
   lightboxClose.addEventListener('click', closeLightbox);
 
-  // إغلاق عند الضغط خارج الصورة
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
       closeLightbox();
     }
   });
 
-  // إغلاق بزر Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox.classList.contains('open')) {
       closeLightbox();
     }
   });
 </script>
+
 
 <!-- Results / Case Studies Section -->
 <section id="results">
