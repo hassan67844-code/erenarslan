@@ -1,1 +1,584 @@
 # erenarslan
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محمد أرسان - Senior SEO Specialist</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #38bdf8, #1e293b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 28px;
+      color: #f9fafb;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+      flex-shrink: 0;
+    }
+
+    .hero-main {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 800;
+      color: #f9fafb;
+    }
+
+    .title {
+      font-size: 15px;
+      color: #a5b4fc;
+      font-weight: 500;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: #cbd5f5;
+      max-width: 520px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 13px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #22c55e);
+      border-color: rgba(148, 163, 184, 0.2);
+      color: #f9fafb;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 35px rgba(37, 99, 235, 0.6);
+    }
+
+    .btn-outline {
+      border-color: #4b5563;
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .btn-outline:hover {
+      background: #111827;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 18px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #22c55e, #38bdf8);
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 16px;
+      padding: 16px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.8);
+    }
+
+    .timeline-item {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(55, 65, 81, 0.6);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .job-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .job-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: #e5e7eb;
+    }
+
+    .job-meta {
+      font-size: 12px;
+      color: #9ca3af;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .job-meta span::before {
+      content: "•";
+      margin: 0 3px;
+      color: #4b5563;
+    }
+
+    .job-meta span:first-child::before {
+      content: "";
+      margin: 0;
+    }
+
+    .job-points {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #d1d5db;
+      padding-right: 16px;
+    }
+
+    .job-points li {
+      margin-bottom: 4px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .stat {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 14px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 16px;
+      color: #facc15;
+      margin-bottom: 2px;
+    }
+
+    .contact-card p {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #e5e7eb;
+    }
+
+    .contact-card span.label {
+      color: #9ca3af;
+      font-size: 12px;
+      margin-left: 4px;
+    }
+
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div style="display:flex; gap:16px; align-items:center;">
+        <div class="avatar">MA</div>
+        <div class="hero-main">
+          <div class="name">محمد أرسان</div>
+          <div class="title">Senior SEO Specialist · Data-Driven Strategies Expert</div>
+          <p class="hero-sub">
+            أكثر من 5 سنوات خبرة في قيادة استراتيجيات تحسين محركات البحث لعلامات تجارية في
+            مجالات السياحة العلاجية، التعليم، العقار، والتجارة الإلكترونية، مع تركيز على النتائج
+            القابلة للقياس وتحسين تجربة المستخدم.
+          </p>
+          <div class="hero-meta">
+            <span>📍 الدوحة – المنتزه، قطر</span>
+            <span>📞 +974 716 75 716</span>
+            <span>✉️ <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a></span>
+          </div>
+          <div class="hero-actions">
+            <!-- غيّر رابط الـ CV هنا لو حابب تضيفه من Google Drive مثلاً -->
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">📄 تحميل السيرة الذاتية</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
+              in زيارة ملف لينكدإن
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- العمود الأيسر: من أنا + الخبرات -->
+      <div>
+        <section id="about">
+          <h2>من أنا</h2>
+          <div class="card">
+            <p style="font-size:14px;">
+              متخصص في تحسين محركات البحث (SEO) وتطوير استراتيجيات المحتوى مع خبرة عملية في بناء المواقع
+              من الصفر، إدارة فرق التطوير والمحتوى، وتحويل البيانات من Google Analytics وSearch Console
+              إلى قرارات تسويقية واضحة. أركز على:
+            </p>
+            <ul class="job-points" style="margin-top:6px;">
+              <li>تحسين الأداء العضوي للمواقع وتحقيق نمو كبير في الزيارات والنقرات والتحويلات.</li>
+              <li>بناء بنية موقع قوية (Technical SEO, Site Architecture, Internal Linking).</li>
+              <li>تخطيط وتنفيذ استراتيجيات محتوى متعددة اللغات تستهدف نوايا بحث تجارية وتعاملاتية.</li>
+              <li>استخدام البيانات لقياس النجاح وتحسين الحملات بشكل مستمر.</li>
+            </ul>
+            <div class="stat-row">
+              <div class="stat">
+                <strong>+400%</strong>
+                نمو متوسط في ترتيب النتائج العضوية عبر المشاريع المختلفة.
+              </div>
+              <div class="stat">
+                <strong>+975%</strong>
+                زيادة في النقرات العضوية لمشاريع تعليمية خلال أقل من عام.
+              </div>
+              <div class="stat">
+                <strong>+200K</strong>
+                زيارات شهرية لمشاريع طبية وعقارية بعد تطبيق الاستراتيجية.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience">
+          <h2>الخبرات العملية</h2>
+          <div class="card">
+            <!-- Fiper Trading -->
+            <div class="timeline-item">
+              <div class="job-header">
+                <div class="job-title">SEO Specialist (Freelance) – Fiper Trading</div>
+                <div class="job-meta">
+                  <span>أكتوبر 2024 – مايو 2025</span>
+                  <span>قطر – الدوحة</span>
+                  <span>مجال: التداول والفوركس</span>
+                </div>
+              </div>
+              <ul class="job-points">
+                <li>قيادة وتنفيذ استراتيجية SEO كاملة للسوق العربي في مجال التداول.</li>
+                <li>رفع النقرات من 0 إلى 43.4K والانطباعات إلى 1.99M خلال أول 6 أشهر.</li>
+                <li>إنشاء خطة محتوى تضم أكثر من 200 مقال SEO عالي الجودة.</li>
+                <li>تنفيذ تحسينات تقنية لرفع سرعة الموقع وتحسين الزحف والأرشفة.</li>
+              </ul>
+            </div>
+
+            <!-- Itqan Education -->
+            <div class="timeline-item">
+              <div class="job-header">
+                <div class="job-title">SEO Team Lead – Itqan Education</div>
+                <div class="job-meta">
+                  <span>يناير 2024 – يونيو 2024</span>
+                  <span>تركيا</span>
+                  <span>مجال: التعليم</span>
+                </div>
+              </div>
+              <ul class="job-points">
+                <li>بناء أساس الـ SEO من الصفر (Keyword Research, Content Calendar, On-Page SEO).</li>
+                <li>زيادة النقرات من 987 إلى 10.6K (+975%) والانطباعات من 109K إلى 603K (+453%).</li>
+                <li>تحسين CTR من 0.9% إلى 1.8% ورفع متوسط الترتيب من 15.9 إلى 12.4.</li>
+              </ul>
+            </div>
+
+            <!-- Mdares ai -->
+            <div class="timeline-item">
+              <div class="job-header">
+                <div class="job-title">Technical SEO Specialist – Mdares AI Platform</div>
+                <div class="job-meta">
+                  <span>أبريل 2025 – مايو 2025</span>
+                  <span>الرياض – السعودية</span>
+                  <span>مجال: التعليم والتقنية</span>
+                </div>
+              </div>
+              <ul class="job-points">
+                <li>تنفيذ تدقيق فني شامل لموقع تعليمي كبير (AI Schools).</li>
+                <li>تحديد أولويات مشاكل الزحف والأرشفة وتحسين Core Web Vitals.</li>
+                <li>التنسيق المباشر مع فريق التطوير لتنفيذ التحسينات ومتابعة نتائجها عبر GSC وLighthouse.</li>
+              </ul>
+            </div>
+
+            <!-- International Clinics -->
+            <div class="timeline-item">
+              <div class="job-header">
+                <div class="job-title">Senior SEO (Freelance) – International Clinics</div>
+                <div class="job-meta">
+                  <span>يناير 2024 – مايو 2025</span>
+                  <span>تركيا – السياحة العلاجية</span>
+                </div>
+              </div>
+              <ul class="job-points">
+                <li>رفع ترتيب النتائج العضوية بنسبة 400% لموقع السياحة العلاجية.</li>
+                <li>حل مشاكل تقنية حسّنت الظهور في محركات البحث وزادت الزيارات العضوية بنسبة 170%.</li>
+                <li>تحسين المحتوى والعناوين والوصف التعريفي مما قاد لزيادة 200% في الزيارات العضوية.</li>
+                <li>إدارة محتوى متعدد اللغات (6 لغات) مع زيادة 250% في الزيارات العضوية العالمية.</li>
+              </ul>
+            </div>
+
+            <!-- Batal Eye & Dental -->
+            <div class="timeline-item">
+              <div class="job-header">
+                <div class="job-title">SEO Specialist – Batal Eye & Batal Dental Centers</div>
+                <div class="job-meta">
+                  <span>يناير 2024 – يونيو 2024</span>
+                  <span>جدة – السعودية</span>
+                  <span>مجال: طب العيون وطب الأسنان</span>
+                </div>
+              </div>
+              <ul class="job-points">
+                <li>إدارة فريق تطوير الموقع وتحسين البنية الداخلية والـ UX.</li>
+                <li>إعادة هيكلة المحتوى وفق تحديثات جوجل الأخيرة واستعادة النمو بعد انخفاض الترافيك.</li>
+                <li>التركيز على كلمات “طبيب/دكتور + التخصص” لاستهداف نية بحث عالية التحويل.</li>
+                <li>رفع أداء الموقع من 83–85% إلى 97–98% وزيادة الترافيك بأكثر من 200% لمركز الأسنان.</li>
+              </ul>
+            </div>
+
+            <!-- Imtilak / Iilajak / Arkan / Freelance -->
+            <div class="timeline-item">
+              <div class="job-header">
+                <div class="job-title">SEO & SEM Specialist – Imtilak Group, Iilajak Medical, Arkan Proje</div>
+                <div class="job-meta">
+                  <span>2021 – 2023</span>
+                  <span>تركيا</span>
+                  <span>مجالات: العقار، السياحة العلاجية، المشاريع الاستثمارية</span>
+                </div>
+              </div>
+              <ul class="job-points">
+                <li>تحقيق الصفحة الأولى لكلمات تنافسية في العقار والسياحة العلاجية خلال أشهر قليلة.</li>
+                <li>رفع عدد الزوار من 60K إلى 120K شهريًا للعقار، ومن 80K إلى 200K شهريًا للمواقع الطبية.</li>
+                <li>حل المشكلات التقنية ومراجعة المحتوى بشكل مستمر وفق أحدث إرشادات جوجل.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <div class="job-header">
+                <div class="job-title">Freelance SEO Specialist – Child Diapers, Buyuk Anadolu, وغيرها</div>
+                <div class="job-meta">
+                  <span>2020 – 2022</span>
+                  <span>تركيا</span>
+                  <span>مجال: تجارة إلكترونية، استيراد وتصدير، منتجات أطفال</span>
+                </div>
+              </div>
+              <ul class="job-points">
+                <li>إنشاء وإدارة مواقع من الصفر وتحسينها وفق خوارزميات جوجل.</li>
+                <li>تحسين تجربة المستخدم والـ CTA للصفحات الخدماتية والمنتجات.</li>
+                <li>تطوير وحضور قوي على Google My Business وتحسين Local SEO.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- العمود الأيمن: المهارات، الأدوات، التعليم، اللغات، التواصل -->
+      <div>
+        <section id="skills">
+          <h2>المهارات الأساسية</h2>
+          <div class="card">
+            <p style="font-size:13px; margin-bottom:8px;">تركيز رئيسي على:</p>
+            <div class="pill-row" style="margin-bottom:6px;">
+              <span class="pill">Technical SEO</span>
+              <span class="pill">On-Page & Content SEO</span>
+              <span class="pill">Keyword & SERP Analysis</span>
+              <span class="pill">Content Strategy</span>
+              <span class="pill">SEO-Driven UX</span>
+              <span class="pill">Conversion-Focused Copy</span>
+            </div>
+            <p style="font-size:13px; margin-top:6px;">Soft Skills:</p>
+            <div class="pill-row">
+              <span class="pill">العمل ضمن فريق</span>
+              <span class="pill">التفكير النقدي</span>
+              <span class="pill">التفاوض</span>
+              <span class="pill">التواصل الفعال</span>
+              <span class="pill">إدارة المشاريع</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="tools">
+          <h2>الأدوات والبرامج</h2>
+          <div class="card">
+            <div class="pill-row">
+              <span class="pill">Google Analytics GA4</span>
+              <span class="pill">Google Search Console</span>
+              <span class="pill">Google Tag Manager</span>
+              <span class="pill">Ahrefs</span>
+              <span class="pill">SEMrush</span>
+              <span class="pill">Screaming Frog</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="education">
+          <h2>التعليم والدورات</h2>
+          <div class="card">
+            <div style="margin-bottom:10px;">
+              <strong style="font-size:14px;">بكالوريوس الهندسة المدنية</strong>
+              <div style="font-size:12px; color:#9ca3af;">2020 – كلية الهندسة المدنية</div>
+            </div>
+            <div>
+              <strong style="font-size:14px;">Major of Marketing Strategic</strong>
+              <div style="font-size:12px; color:#9ca3af;">أكاديمية الأعمال الدولية – سويسرا (IBAS) · فبراير 2024 – مستمر</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="languages">
+          <h2>اللغات</h2>
+          <div class="card">
+            <ul class="job-points">
+              <li>العربية – اللغة الأم.</li>
+              <li>الإنجليزية – مستوى جيد جدًا (قراءة وكتابة وتواصل مهني).</li>
+              <li>التركية – مستوى جيد.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>معلومات التواصل</h2>
+          <div class="card contact-card">
+            <p>
+              📞 <strong>الهاتف:</strong>
+              <span class="label">واتساب وتيليجرام متاحان على نفس الرقم</span><br />
+              +974 716 75 716
+            </p>
+            <p>
+              ✉️ <strong>البريد الإلكتروني:</strong><br />
+              <a href="mailto:hassan67844@gmail.com">hassan67844@gmail.com</a>
+            </p>
+            <p>
+              🔗 <strong>لينكدإن:</strong><br />
+              <a href="https://www.linkedin.com/in/mohamed-arslan-25b758237/" target="_blank" rel="noopener">
+                /mohamed-arslan-25b758237
+              </a>
+            </p>
+            <p>
+              📍 <strong>العنوان:</strong><br />
+              الدوحة – المنتزه، قطر
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="year"></span> محمد أرسان – جميع الحقوق محفوظة
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
